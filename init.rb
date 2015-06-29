@@ -1,12 +1,8 @@
 require 'daemons'
-require 'syslog/logger'
+require_relative './syslog.rb'
 
 #превратили процесс в демона
 Daemons.daemonize( :logfile_name =>'/home/nkraev/daemon.log', :app_name => "aisle" ) do
-
-#инициализация лог файла
-LOG = Syslog::Logger.new 'aisle'
-LOG.level = Logger::INFO
 
 LOG.info("Start daemon")
 LOG.info("Commit log")

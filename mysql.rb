@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'mysql2'
+require_relative './syslog.rb'
 
 class UserRecords
   def initialize(host,port,database,username,password)
@@ -39,7 +40,7 @@ class UserRecords
 end
 
 
+LOG.info("Mysql Development")
 user = UserRecords.new("127.0.0.1", 3306, 'myapp', 'nkraev', 'nkraev')
-
 user.save("Kolia","User Kolia","nikraev@yandex.ru", "89057505045", "Slobodskoy streee 17. d 8")
 
