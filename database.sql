@@ -10,4 +10,6 @@ description CHAR(10) NULL,
 email CHAR(30) NULL 
 )ENGINE=InnoDB;
 
+ALTER TABLE users ADD COLUMN phone int null;
+ALTER TABLE users ADD COLUMN address char(100) null;
 
