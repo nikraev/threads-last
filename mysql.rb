@@ -18,3 +18,5 @@ class MysqlData
     
   end
 end
+
+mydata = Mysql2::Client.new()
