@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'syslog/logger'
 
 LOG = Syslog::Logger.new 'aisle'
