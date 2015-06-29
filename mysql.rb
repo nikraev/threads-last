@@ -9,8 +9,10 @@ class UserRecords
 
 #save user in database  
   def save(name,description,email,phone,address)
-    #if @connect.
-    @connect  = self.connectMySql()
+    if !@connect
+    @connect  = self.connectMySql()      
+    end 
+
     #@connect.query("INSERT INTO users('name','description','email','phone','address') VALUES ( "#{name}", "#{description}", "#{email}", "#{phone}", "#{address}") ")     
     @connect.query("INSERT INTO users(name, description, email, phone, address) VALUES ( '#{name}', '#{description}', '#{email}','#{phone.to_s}','#{address}' )")
     
