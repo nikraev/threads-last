@@ -1,3 +1,4 @@
+require 'bunny'
 
 class RabbitQueue
   def initialize(host)
