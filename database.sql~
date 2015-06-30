@@ -14,12 +14,4 @@ phone char(10) null,
 address char(10) null
 )ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS tweets(
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-forum CHAR(40) NULL,
-message CHAR(40) NULL,
-userid INT NOT NULL,
-FOREIGN KEY(userid) REFERENCES users(id) ON DELETE CASCADE
-)ENGINE=InnoDB;
-
 
