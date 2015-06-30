@@ -24,12 +24,13 @@ class DataRecords
     
   end
 #tweets methods
-  def saveTweet(forum,message,user)
-    
+  def saveTweet(forum,message,userid)
+     self.checkConnectMySQL()    
+     @connect.query("INSERT INTO tweets(forum,message,userid) VALUES ( '#{forum}', '#{message}', '#{userid}')")
   end
   
   def updateTweets(forum,message,user,id)
-  
+  end
  protected 
   
   def connectMySql()    
@@ -42,10 +43,11 @@ class DataRecords
     @connect  = self.connectMySql()      
     end 
   end  
+  
 end
 
 
 LOG.info("Mysql Development")
 user = DataRecords.new("127.0.0.1", 3306, 'myapp', 'nkraev', 'nkraev')
 user.saveUser("Kolia","User Kolia","nikraev@yandex.ru", "89057505045", "Slobodskoy streee 17. d 8")
-
+user.saveTweet("all","asdhasd",1)
