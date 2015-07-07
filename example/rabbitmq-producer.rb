@@ -31,3 +31,5 @@ rabbit = ImportData.new
 1000.times do |i|
 rabbit.insertUser("nikraev #{i},nikraev@yandex.ru")
 end
+puts "Import complite"
+exit

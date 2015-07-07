@@ -12,9 +12,10 @@ class RabbitQueue
       
       puts @channel
       
-      queue = @channel.queue("#{@queue}")
+      
+      queue = @channel.queue(@queue)
       queue.subscribe(:block => true) do |delivery_info, properties, body|
-      return body     
+      body << body.to_s
       end  
     
   end
@@ -38,6 +39,6 @@ protected
   end
 end
 
-r = RabbitQueue.new('localhost','hello')
+r = RabbitQueue.new('localhost','user')
 body = r.getData()
 puts body
