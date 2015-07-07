@@ -47,7 +47,3 @@ class DataRecords
 end
 
 
-LOG.info("Mysql Development")
-user = DataRecords.new("127.0.0.1", 3306, 'myapp', 'nkraev', 'nkraev')
-user.saveUser("Kolia","User Kolia","nikraev@yandex.ru", "89057505045", "Slobodskoy streee 17. d 8")
-user.saveTweet("all","asdhasd",1)

@@ -1,10 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    amq-protocol (1.9.2)
+    bunny (1.7.0)
+      amq-protocol (>= 1.9.2)
+    daemons (1.2.3)
     mysql2 (0.3.18)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bunny
+  daemons
   mysql2

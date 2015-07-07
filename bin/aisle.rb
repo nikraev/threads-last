@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'daemons'
 require_relative '../lib/syslog.rb'
 require_relative '../lib/mysql.rb'
